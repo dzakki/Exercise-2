@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script> -->
+</head>
+<body>
+    <h1>Hello pertama</h1>
+    <input type="text" name="test" id="data">
+    <button onclick="document.getElementById('data').value = 'Value Baru'">Click</button>
+    <button onclick="alert('js Inline')">Click me</button>
+    <button onclick="confirm('event confirm')">confirm</button>
+
+    <div style="width:100px; height: 100px; background-color: blueviolet" onmouseover="alert('over here')">Over here</div>
+</body>
+</html>
+
+<script>
+    // Number
+    // 5
+    // 3.14
+
+    //matematika
+
+    // 5 + 7
+    // 5 - 2
+    // 2 * 8
+    // 4 / 2
+    // 6 % 2
+
+    // String
+    // "john doe"
+    // "budi@tono.com"
+
+
+    //alert memunculkan pesan
+    // alert('pesan');
+
+    // Prompt Memunculkan pesan dan feedback
+    // const pesan =  prompt('pesan');
+
+    // console.log memunculkan pesan dilatar belakang
+    // console.log(pesan);
+
+    //var atau variable sebagai menampung nilai
+    // var x
+    // x = 1
+    // x + 4
+    // x = 5
+    // var y = 2
+    // x + y + 7
+    // y = x + 7
+
+    document.querySelector('h1').textContent += ' Saya adalah heading 1 ';
+    document.querySelector('h1').innerHTML += '<p>Hello word</p>';
+
+    //mengambil id dan memberikan nilai value
+    // document.getElementById('data').value = "Value Baru";
+
+
+    ///###############################################
+    const input1 = prompt('masukkan nilai');
+    document.querySelector('h1').innerText = input1;
+    parseInt(input1);
+    console.log(typeof input1);
+
+
+
+</script>

@@ -1,0 +1,111 @@
+<!-- <script>
+
+//#######conditional##########
+
+
+5 > 3 // akan menghasilkan true //> lebih besar
+5 < 2 // akan menghasilkan false //< lebih kecil
+5 == 5 // akan menghasilkan true //== sama dengan
+
+console.log('5' == 5); //hasil true
+console.log('5' === 5); //false //Sensitive
+if (true) {
+    console.log('ini hasilnya true');
+}else{
+    console.log('ini hasilnya false lol');
+}
+
+var myheight = 160;
+if (myheight > 160) {
+    console.log('bisa naik role coaster');
+}else{
+    console.log('sabar.. masih belum bisa naik');
+}
+
+//#######logical operator ########/
+var ownKTP = true,
+    ownSIM = false;
+
+if (ownSIM) {
+    console.log('saya bisa beli bir')
+} else {
+    if (ownKTP) {
+        console.log('saya bisa beli arak');
+    }
+}
+
+if (ownKTP || ownSIM) {
+    console.log('saya bisa beli baju');
+}
+
+var myAge = 17,
+    myheight = 167;
+if (myAge > 14 && myheight > 160) {
+    console.log('saya bisa naik mobil');
+}
+</script> -->
+<!-- <script>
+// const hari  = 'senen';
+// if (hari == 'senen') {
+//     console.log('saya harus sekolah')
+// } else if (hari == 'selasa') {
+//     console.log('saya harus les')
+// } else {
+//     console.log('hore libur lol');
+// }
+
+// const input1 = prompt('masukkan nama hari ini');
+// if (input1 == 'senen') {
+//     alert('wah hari senen, saya harus upcara')
+// }else if (input == 'selesa') {
+//     alert('wah hari selesa, saya harus berangkat jam 8 pagi')
+// }else {
+//     alert('sekarang waktunya maen ps')
+// }
+
+// const cuaca = prompt("Bagaimanakah cuaca hari ini ?");
+// switch (weather) {
+//   case "mendung":
+//     console.log("jas hujan");
+//     break;
+//   case "panas":
+//     console.log("Pakai kaos");
+//     break;
+//   case "hujan":
+//     console.log("Bawa payungnya");
+//     break;
+//   default:
+//     console.log("Cuaca tidak ada");
+// }
+</script> -->
+<script>
+var count = 1;
+while(count < 10){
+    count++;
+    console.log("ini adalah count"+count);
+}
+
+for (let $1 = 20; $1 > 10; $1--) {
+    console.log("ini adalah baris "+$1);
+}
+
+var tampilan='';
+for (var i = 1; i <=10; i++) {
+  if (i%2==0) { //jika i dom 2 == 0.. maksud i dom 2 mengambil sisa pembagian, jadi pembagian i dengan 2 maka tidak ada sisa
+   for (var j = 1; j <= 10; j++) {
+    if (j%2==0) {
+     tampilan+='#';
+    }else tampilan+=' ';
+   }
+   tampilan+='\n';
+  }else{
+   for (var j = 1; j <= 10; j++) {
+    if (j%2==0) {
+     tampilan+=' ';
+    }else tampilan+='#';
+   }
+   tampilan+='\n';
+  }
+}
+console.log(tampilan);
+</script>

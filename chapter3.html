@@ -1,0 +1,79 @@
+<!-- <script>
+//######## while-loop #########
+
+// while(Kondisi) { // Kondisi yang menentukan apakah program akan melakukan iterasi. Berupa boolean atau true/false.
+//   Proses // Merupakan proses yang akan dijalankan dalam satu iterasi
+// }
+
+var vlag = 1;
+while (vlag < 10) { //vlag lebih kecil dari 10  //// Loop akan terus berjalan selama nilai flag masih dibawah 10
+    console.log(vlag);
+    vlag++; //maka vlag di tambah 1 sampai 9
+}
+
+var deret = 5,
+    jumlah = 0;
+while (deret > 0) { /// Loop akan terus berjalan selama nilai deret masih di atas 0
+    jumlah += deret; //// Menambahkan nilai variable jumlah dengan angka deret
+    deret--; //// Mengubah nilai deret dengan mengurangi 1. //5 4 3 2 1
+    console.log('Jumlah ke' + jumlah);
+}
+console.log(jumlah);
+
+//######## for-loop ##########
+
+// for(Inisialisasi; Kondisi; Incremental) {
+//   Proses // Merupakan proses yang akan dijalankan dalam satu iterasi
+// }
+
+for(var angka = 1; angka <= 10; angka++) {
+  console.log('Iterasi ke-' + angka);
+}
+var jumlah = 0;
+for (let deret = 5; deret > 0; deret--) {
+    jumlah += deret;
+    console.log('jumlah saat ini-' + jumlah);
+}
+console.log(jumlah);
+
+for(var deret = 0; deret < 10; deret += 2) {
+  console.log('Iterasi dengan Increment counter 2: ' + deret);
+}
+
+console.log('-------------------------------');
+
+for(var deret = 15; deret > 0; deret -= 3) {
+  console.log('Iterasi dengan Decrement counter : ' + deret);
+}
+</script> -->
+<script>
+
+// ############ Methods ##############
+// Math.abs(x);
+// var absolut = Math.abs(-21,1);
+// console.log(absolut);
+// var absolutAkhir = Math.ceil(23,9);
+// console.log(absolutAkhir);
+
+var angka2 = Math.ceil(1.99); // angka2 = 2
+var angka1 = Math.ceil(0.1);  // angka1 = 1
+var angka0 = Math.ceil(-0.1); // angka0 = 0
+
+var angkabaru = Math.floor(3.9); //angka = 3
+console.log(angkabaru);
+
+console.log(Math.trunc(13.37));
+// expected output: 13
+
+console.log(Math.trunc(42.84));
+// expected output: 42
+
+console.log(Math.trunc(0.123));
+// expected output: 0
+
+console.log(Math.trunc(-0.123));
+// expected output: -0
+
+console.log(Math.random());
+console.log(Math.abs(-4.09));
+</script>
