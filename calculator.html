@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="calculator">
+            <legend><h2>Calculator</h2></legend>
+            <table border="0" cellspacing='3'>
+                <tr>
+                    <td colspan="4"> <input type="text" id="input" maxlength="18" readonly/></td>
+                    <td><button class="hapus" onclick="inputKalk('<')">&lt;</button></td>
+                </tr>
+                <tr>
+                    <td><button class="angka" onclick="inputKalk('7')">7</button></td>
+                    <td><button class="angka" onclick="inputKalk('8')">8</button></td>
+                    <td><button class="angka" onclick="inputKalk('9')">9</button></td>
+                    <td colspan="2"><button class="ac" onclick="inputKalk('ac')" >AC</button></td>
+                </tr>
+                <tr>
+                    <td><button class="angka" onclick="inputKalk('4')">4</button></td>
+                    <td><button class="angka" onclick="inputKalk('5')">5</button></td>
+                    <td><button class="angka" onclick="inputKalk('6')">6</button></td>
+                    <td><button class="operasi" onclick="inputKalk('+')">+</button></td>
+                    <td><button class="operasi" onclick="inputKalk('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="angka" onclick="inputKalk('1')">1</button></td>
+                    <td><button class="angka" onclick="inputKalk('2')">2</button></td>
+                    <td><button class="angka" onclick="inputKalk('3')">3</button></td>
+                    <td><button class="operasi" onclick="inputKalk('x')">x</button></td>
+                    <td><button class="operasi" onclick="inputKalk('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="operasi" onclick="inputKalk('%')">%</button></td>
+                    <td><button class="angka" onclick="inputKalk('0')">0</button></td>
+                    <td><button class="angka" onclick="inputKalk('.')">.</button></td>
+                    <td colspan="2"><button class="hasil" onclick="inputKalk('=')">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        var input = document.getElementById('input');
+        var ke = 0;
+        function kosong() {
+            input.value = '';
+        }
+        function inputKalk(fields) {
+            switch (fields) {
+                case '=':
+                    if(input.value.length == 1 || input.value.length == 0){
+                        kosong();
+                    }else{
+                        var inputSplit = input.value.split('x');
+                        if ( inputSplit.length > 0) {
+                            var inputSplit = input.value.split('x').join('*');
+                            var hasil = eval(inputSplit);
+                            input.value = hasil; 
+                        }else{
+                            var hasil = eval(input.value);
+                            input.value = hasil; 
+                        }                        
+                    }
+
+                    break;
+                case '%':
+                    var inputParse = eval(input.value);
+                    var jumlahField = inputParse / 100;
+                    input.value = jumlahField;
+                    break;
+                case '<':
+                    var str = input.value;
+                    str = str.slice(0, -1);
+                    input.value = str;
+                    break;
+                case 'ac':
+                    kosong();
+                    break;
+                default:
+                    input.value += fields;
+                    break;
+            }
+            
+        }
+    </script>
+</body>
+</html>
